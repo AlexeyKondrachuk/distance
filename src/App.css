@@ -1,0 +1,80 @@
+#root {
+  width: 70%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  margin-top: 100px;
+  position: relative;;
+  width: 55vw;
+}
+
+.form {
+ display: flex;
+ width: 55vw;
+ justify-content: space-between;
+ 
+}
+
+.item {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+}
+
+.date, .distance {
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-right: 30px;
+  border-radius: 7px;
+}
+
+.input {
+  width: 10vw;
+  height: 26px;
+  margin-top: 10px;
+
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+.button_create {
+  width: 130px;
+  height: 32px;
+  text-align: center;
+  padding: 0px;
+  margin-top: 35px;
+}
+
+
+.item-list {
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.header_list {
+  display: flex;
+  justify-content: space-between;
+}
