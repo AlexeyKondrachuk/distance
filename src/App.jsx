@@ -9,24 +9,27 @@ const App = () => {
   const createItem = (dateState, distance) => {
    
     const searchDate = items.findIndex((element) => element.dateState === dateState);
-    if (searchDate !== 0 ) {
-      const newItem = { id: crypto.randomUUID(), dateState, distance };
-      const updatedItems = [...items, newItem];
-      setItems(updatedItems);
+   
+    if (searchDate === -1 ) {
+      
+      var newItem = [{ id: crypto.randomUUID(), dateState, distance: Number(distance)}];
+      const updatedItems = [...items, ...newItem];
       console.log('новая дата')
+      setItems(updatedItems)
+      
+    
+     
     }
     else {
-    let second = [...items]
-    let dist = [ { id: crypto.randomUUID(), dateState, distance }];
-    let third = second.map((item, index) => ({...item, ...dist[index]}))
-    console.log(items)
-    console.log(dist)
-    setItems(third)
     
-  
+    const dist = items.filter(item => item.dateState !== dateState)
+    var newDistance = [{ id: crypto.randomUUID(), dateState, distance: Number(items[searchDate].distance) + Number(distance)}]
+    newItem = [...dist, ...newDistance]
+    setItems(newItem)
+     
     }
-    
   
+    
   }
 
 
